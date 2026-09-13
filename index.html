@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElSheikh Kingdom</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f2f9f5;
+            color: #333;
+        }
+        /* الهيدر بلون أخضر مميز */
+        header {
+            background-color: #1b4332;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        header .logo h1 {
+            font-size: 24px;
+            color: #52b788;
+        }
+        header .contact-btn {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        header .contact-btn:hover {
+            background-color: #40916c;
+        }
+
+        /* واجهة البحث (Hero Section) بدرجات الأخضر */
+        .hero {
+            background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+        .hero h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+            color: #d8f3dc;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #b7e4c7;
+        }
+        .search-box {
+            background: white;
+            padding: 12px;
+            border-radius: 30px;
+            display: inline-flex;
+            gap: 10px;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .search-box select, .search-box button {
+            padding: 12px 15px;
+            border: 1px solid #d8f3dc;
+            border-radius: 20px;
+            font-size: 16px;
+            outline: none;
+        }
+        .search-box select {
+            flex: 1;
+            background-color: #f8f9fa;
+        }
+        .search-box button {
+            background-color: #52b788;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .search-box button:hover {
+            background-color: #40916c;
+        }
+
+        /* الأقسام والمنتجات */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 28px;
+            color: #1b4332;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #52b788;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: 0.3s;
+            text-align: center;
+            padding-bottom: 20px;
+            border-top: 4px solid #52b788;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(82, 183, 136, 0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 15px 0 8px;
+            font-size: 20px;
+            color: #1b4332;
+        }
+        .card p {
+            color: #666;
+            font-size: 14px;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .card .price {
+            color: #2d6a4f;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .card a {
+            background-color: #52b788;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .card a:hover {
+            background-color: #1b4332;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #1b4332;
+            color: #b7e4c7;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <h1>عالم الإكسسوارات</h1>
+        </div>
+        <div>
+            <a href="https://wa.me/201234567890" class="contact-btn" target="_blank">اطلب عبر الواتساب</a>
+        </div>
+    </header>
+
+    <!-- قسم البحث والواجهة -->
+    <div class="hero">
+        <h2>أحدث إكسسوارات الموبايل الجملة والقطاعي</h2>
+        <p>شواحن أصلية، وصلات سريعة، جرابات شيك، اسكرينات حماية، وصبات وسماعات بلوتوث.</p>
+        
+        <div class="search-box">
+            <select>
+                <option value="">ابحث عن منتج أو إكسسوار...</option>
+                <option value="chargers">شواحن أصلية ورؤوس شحن</option>
+                <option value="cables">وصلات (كابلات) Type-C / iPhone</option>
+                <option value="cases">جرابات وسيليكونات ضد الصدمات</option>
+                <option value="screens">اسكرينات حماية زجاج و سيراميك</option>
+                <option value="speakers">صبات وسماعات بلوتوث</option>
+            </select>
+            <button>بحث سريع</button>
+        </div>
+    </div>
+
+    <!-- المنتجات والأقسام الخارجية -->
+    <div class="container">
+        <h2 class="section-title">أبرز أقسام الإكسسوارات</h2>
+        
+        <div class="grid">
+            <!-- كارت 1: الشواحن -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80" alt="شواحن موبايل">
+                <h3>شواحن سريعة (Fast Chargers)</h3>
+                <p>رؤوس شحن أصلية بقدرات مختلفة (20W, 33W, 65W) آمنة تماماً على بطارية الموبايل.</p>
+                <div class="price">متوفر قطاعي وجملة</div>
+                <a href="#">عرض المنتجات</a>
+            </div>
+
+            <!-- كارت 2: الوصلات والكابلات -->
+            <div class="card">
+               <img src="case.jpg" alt="شواحن موبايل">
+                <h3>وصلات وكابلات شحن متينة</h3>
+                <p>كابلات قماش وضد القَطع (Type-C, Micro, iPhone) تدعم النقل السريع للبيانات.</p>
+                <div class="price">متوفر قطاعي وجملة</div>
+                <a href="#">عرض المنتجات</a>
+            </div>
+
+            <!-- كارت 3: الجرابات -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=500&q=80" alt="جرابات موبايل">
+                <h3>جرابات حماية وأغطية أنيقة</h3>
+                <p>تشكيلة واسعة من الجرابات السيليكون، الشفافة، المضادة للصدمات لكل الماركات.</p>
+                <div class="price">متوفر قطاعي وجملة</div>
+                <a href="#">عرض المنتجات</a>
+            </div>
+
+            <!-- كارت 4: الاسكرينات -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=500&q=80" alt="اسكرينات حماية">
+                <h3>اسكرينات حماية الشاشة</h3>
+                <p>اسكرينات زجاج مقسى (Tempered Glass)، سيراميك، وضد البصمة لحماية مثالية.</p>
+                <div class="price">متوفر قطاعي وجملة</div>
+                <a href="#">عرض المنتجات</a>
+            </div>
+
+            <!-- كارت 5: الصبات والسماعات -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=500&q=80" alt="صبات وسماعات">
+                <h3>صبات وسماعات بلوتوث</h3>
+                <p>مكبرات صوت (Speakers) بصوت نقي وقوي، وسماعات أذن لاسلكية بأسعار منافسة.</p>
+                <div class="price">متوفر قطاعي وجملة</div>
+                <a href="#">عرض المنتجات</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - وجهتك الأولى لأفضل إكسسوارات الهواتف المحمولة</p>
+    </footer>
+
+</body>
+</html>
